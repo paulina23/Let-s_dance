@@ -1,0 +1,342 @@
+@import 'reset';
+
+
+//========= GLOBAL CLASSES ===================================
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// body {
+//     background-color: black;
+// }
+
+a, a:visited{
+    color:#cf1d56;
+    text-decoration: none;
+    border-bottom: 1px solid #cf1d56;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row::before, .row::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.row *[class*="col"] {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row .col-1-2 {
+    width: 50%;
+}
+
+.row .col-12 {
+    width: 100%;
+}
+
+.text {
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+}
+
+
+.sectionTitle {
+    font-family: 'Amatic SC', cursive;
+    font-weight: normal;
+    color: white;
+    font-size: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+//========= HEADER ===================================
+
+div.header {
+    height: 454px;
+    background-repeat: no-repeat;
+    background-image: url('/img/4.jpg');
+    background-size: 100% auto;
+    background-color: black;
+    background-position: center;
+    .animation {
+        list-style: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }.animation li {
+        padding-top: 53px;
+        display: inline-block;
+        font-family: 'Satisfy', cursive;
+        font-size: 50px;
+        font-weight: bold;
+        letter-spacing: 10px;
+        color: #cf1d56;
+        transition: all 1.618s ease;
+        margin-left: 0;
+    }.animation li:last-child{
+        margin-right: 0;
+    }.animation.hidden {
+        opacity: 1;
+    }
+    .animation.hidden li:nth-child(1) {transform:translateX(-200px) translateY(-200px);}
+    .animation.hidden li:nth-child(2) {transform:translateX(20px) translateY(100px);}
+    .animation.hidden li:nth-child(3) {transform:translateX(-150px) translateY(-80px);}
+    .animation.hidden li:nth-child(4) {transform:translateX(10px) translateY(-200px);}
+    .animation.hidden li:nth-child(5) {transform:translateX(-300px) translateY(200px);}
+    .animation.hidden li:nth-child(6) {transform:translateX(20px) translateY(-20px);}
+    .animation.hidden li:nth-child(7) {transform:translateX(30px) translateY(200px);}
+    .animation.hidden li:nth-child(8) {transform:translateX(-200px) translateY(-200px);}
+    .animation.hidden li:nth-child(9) {transform:translateX(20px) translateY(-100px);}
+    .animation.hidden li:nth-child(10) {transform:translateX(-150px) translateY(-80px);}
+    .animation.hidden li:nth-child(11) {transform:translateX(10px) translateY(-200px);}
+    .animation.hidden li:nth-child(12) {transform:translateX(-300px);}
+}
+
+//========= NAVIGATION ===================================
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    font-size: 26px;
+    z-index: 1;
+ li {
+    display: inline-block;
+    margin: 0 94px;
+    position: relative;
+    a {
+        color: white;
+        line-height: 39px;
+        text-decoration: none;
+        transition: 0.5s color;
+        float: right;
+        border: 0;
+        &:hover {
+            color: #cf1d56;
+        }
+    }
+    }
+}
+
+//========= CONTENT ===================================
+
+
+
+.content {
+    width: 100%;
+    background: black;
+    height: auto;
+}
+
+// ========= INSTRUCTORS ===================================
+
+.jazz {
+    width:150px;
+    height: 220px;
+    float: left;
+    cursor: pointer;
+
+}
+
+.salsa {
+    width:150px;
+    height: 220px;
+    cursor: pointer;
+
+}
+
+.streetdance {
+    width: 150px;
+    height: 220px;
+    float: right;
+    cursor: pointer;
+}
+
+.instructor-cnt {
+    position:relative;
+    overflow: hidden;
+    display: inline-block;
+
+    .calendar {
+        position: absolute;
+        left:0;
+        top:0;
+        display: none;
+    }
+    img {
+        display:block;
+        position: relative;
+    }
+    .shortDesc {
+        opacity: 0;
+        position: absolute;
+        left:0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        color: white;
+        background: rgba(black, 0.8);
+        transition: 0.5s opacity;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &:hover{
+        .shortDesc {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+#instructors {
+    padding-top: 15px;
+    padding-bottom: 200px;
+    .col-12 {
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+
+}
+
+.instructor-cnt.view {
+    .calendar {display: block; background:#000;}
+}
+
+.calendar {
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    width: 150px;
+    height: 220px;
+    border: 5px double white;
+    background-color: black;
+    position: relative;
+    .close {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: black;
+        border: 2px solid #fff;
+        color: #fff;
+        top: -15px;
+        right: -15px;
+        line-height: 26px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    button {
+        width: 75px;
+        height: 30px;
+        font-size: 18px;
+        font-weight: 800;
+        background-color: black;
+        font-family: 'Amatic SC', cursive;
+        color: white;
+        margin-left: 30px;
+        margin-top: 1px;
+        border: 1px solid white;
+        transition-duration: 0.4s;
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+    .textClasses {
+        text-align: center;
+        list-style: none;
+        padding: 10px;
+    }
+}
+
+// ========= CONTACT ===================================
+
+#contact {
+    padding-bottom: 100px;
+}
+
+.contactForm {
+    input[type=text], input[type=email], select {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 5px auto;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        background-color: black;
+        color: white;
+        font-family: 'Satisfy', cursive;
+        display: block;
+    }
+    input[type=text].error,
+    input[type=email].error,
+    select.error {
+        border-color: red
+    }
+
+    input[type=submit] {
+        width: 50%;
+        height: 50px;
+        background-color: black;
+        color: white;
+        font-family: 'Satisfy', cursive;
+        font-size: 20px;
+        padding: 14px 20px;
+        margin: 8px auto;
+        border: 1px solid white;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input[type=submit]:hover {
+        background-color: #cf1d56;
+    }
+
+    textarea {
+        background-color: black;
+        color: white;
+        font-family: 'Satisfy', cursive;
+        padding: 12px 20px;
+        margin: 8px auto;
+        width: 50%;
+        height: 100px;
+        resize: none;
+        display: block;
+    }
+
+    label {
+        display: none;
+    }
+
+    .error-text {
+        color: red;
+        padding: 5px 0;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+    }
+}
