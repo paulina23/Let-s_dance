@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // animation "let's dance"
-    //set timeout to change letter animations
+    //set timeout to change letter positions
     $(function(){
         setTimeout(function(){
             $('.animation').removeClass('hidden');

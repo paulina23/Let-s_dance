@@ -84,7 +84,7 @@
                                     <li>Młodzież: wtorki i środy godz. 17:00-18:30</li>
                                     <li>Dzieci (do 12 r.ż): czwartki: 17:00-18:30</li>
                                 </ul>
-                                <button class="saver"> Zapisz się! </button>
+                                <button id="myBtn" class="saver"> Zapisz się! </button>
                             </div>
                         </div>
                         <div class="instructor-cnt">
@@ -122,6 +122,7 @@
                     </div>
                 </div>
 
+
             </div>
 
 
@@ -147,6 +148,9 @@
                     </div>
                 </div>
             </div>
+
+
+
 
             <footer class='footer'>
                 <div class="row content">
@@ -185,11 +189,44 @@
       </div>
 
 
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="modalClose">&times;</span>
+            <h2>Modal Header</h2>
+          </div>
+          <div class="modal-body">
+              <div id="contact" class="row content">
+                  <div class="row">
+                        <h2 style="color: white">Kategoria wiekowa</h2>
+                        <div class="dropdown">
+                            <p id="ageDropdown" class="dropbtn">--Wybierz kategorie wiekową--</p>
+                            <div id="myDropdown" class="dropdown-content">
+                                <!-- TODO: zmien na p i w stylach ogarnij -->
+                                <a class="ageDropdownElement" value="Dorośli">Dorośli</a>
+                                <a class="ageDropdownElement" value="Młodzież">Młodzież</a>
+                                <a class="ageDropdownElement" value="Dzieci">Dzieci</a>
+                            </div>
+                        </div>
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <h3>test</h3>
+              <!-- TODO: Dodaj przycisk zaakceptuj i ostylowac -->
+            <button class="modalClose">Zamknij</button>
+          </div>
+        </div>
+
+      </div>
     </body>
     <script
       src="https://code.jquery.com/jquery-3.2.1.js"
       integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
       crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
+    <script src="js/modal.js"></script>
 </html>
