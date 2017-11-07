@@ -413,7 +413,7 @@ div.header {
 /* Modal Content */
 .modal-content {
     position: relative;
-    background-color: #fefefe;
+    background-color: white;
     margin: auto;
     padding: 0;
     border: 1px solid #888;
@@ -438,22 +438,22 @@ div.header {
 
 /* The Close Button */
 .modalClose {
-    color: white;
+    color: #cf1d56;
     float: right;
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 16px;
+    // font-weight: bold;
 }
 
 .modalClose:hover,
 .modalClose:focus {
-    color: #000;
+    color: black;
     text-decoration: none;
     cursor: pointer;
 }
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #cf1d56;
     color: white;
 }
 
@@ -461,7 +461,7 @@ div.header {
 
 .modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #cf1d56;
     color: white;
 }
 
@@ -469,7 +469,7 @@ div.header {
 
 //========= DROPDOWN =============================
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #cf1d56;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -478,7 +478,8 @@ div.header {
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
+    background-color: white;
+    color: black;
 }
 
 .dropdown {
